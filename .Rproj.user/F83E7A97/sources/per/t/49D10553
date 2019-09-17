@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1568147306055.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "49D10553",
+    "lastKnownWriteTime" : -743502708936284555,
+    "last_content_update" : 1568147306055,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C6555919",
+        "caption" : "GSE6631_Adjusted_Pvals_All_Methods_Wilcoxon",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=GSE6631_Adjusted_Pvals_All_Methods_Wilcoxon&cache_key=C6555919",
+        "displayedObservations" : 12625,
+        "environment" : "",
+        "expression" : "GSE6631_Adjusted_Pvals_All_Methods_Wilcoxon",
+        "object" : "GSE6631_Adjusted_Pvals_All_Methods_Wilcoxon",
+        "preview" : 0,
+        "totalObservations" : 12625,
+        "variables" : 11
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

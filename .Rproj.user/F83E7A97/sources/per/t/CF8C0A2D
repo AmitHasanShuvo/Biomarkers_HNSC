@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1568146263062.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "427987403",
+    "id" : "CF8C0A2D",
+    "lastKnownWriteTime" : 1568151194,
+    "last_content_update" : 1568151194468,
+    "path" : "~/Desktop/RUET ICETCE/Datasets/Thesis/Test6631.R",
+    "project_path" : "Test6631.R",
+    "properties" : {
+        "cursorPosition" : "66,0",
+        "scrollLine" : "43"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

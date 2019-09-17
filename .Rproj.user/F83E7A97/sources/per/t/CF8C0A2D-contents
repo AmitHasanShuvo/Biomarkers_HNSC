@@ -1,0 +1,67 @@
+data <- read.csv("GSE6631.csv", row.names=1)
+
+alpha <- 0.05
+
+cnt <- 0
+
+names <- vector('character')
+pvals <- vector('numeric')
+abslogFC <- vector('numeric')
+
+for (i in 1:nrow(data)){
+  vec1 = as.numeric(data[i:i,1:9])
+  vec2 = as.numeric(data[i:i,10:18])
+  # print(i)
+  #print(vec1)
+  #vec2
+  
+  vec1 = log2(vec1+0.0000000001)
+  vec2 = log2(vec2+0.0000000001)
+  
+  #logFC = abs(mean(log2(vec1)) - mean(log2(vec2)))
+  
+  #vec1 = scale(vec1)
+  #vec2 = scale(vec2)
+  
+  #vec1 = vec1 - mean(vec1)
+  #vec2 = vec2 - mean(vec2)
+  
+  #vec1 = scale(vec1)
+  #vec2 = scale(vec2)
+  #tt=t.test(vec1, vec2)
+  #tt = kruskal.test(list(vec1, vec2))
+  tt=wilcox.test(vec1,vec2)
+  names <- c(names, row.names(data)[i])
+  pvals <- c(pvals, tt$p.value)
+  #abslogFC <- c(abslogFC, logFC)
+  #print(tt$p.value)
+  #break
+}
+#padjusted=pvals
+#'arg' should be one of "holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"
+#padjusted = p.adjust(pvals, method = "BH")
+
+#res = data.frame("Gene"=names, "p-value"=pvals, "Adjusted p-value"=padjusted, "abslogFC"=abslogFC)
+
+#kept = padjusted < 0.01 && abslogFC > 1.0
+
+#res2 = data.frame("Gene"=names[kept], "p-value"=pvals[kept], "Adjusted p-value"=padjusted[kept], "abslogFC"=abslogFC[kept])
+
+#cat(nrow(res2))
+
+#write.csv(res, file="F:/Brand New Thesis/Srijon/T_hochberg_result_all.csv")
+#write.csv(res2, file="F:/Brand New Thesis/Srijon/T_hochberg_result.csv")
+
+
+padjusted_holm = p.adjust(pvals, method = "holm")
+padjusted_hochberg = p.adjust(pvals, method = "hochberg")
+padjusted_hommel = p.adjust(pvals, method = "hommel")
+padjusted_bonferroni = p.adjust(pvals, method = "bonferroni")
+padjusted_BH = p.adjust(pvals, method = "BH")
+padjusted_BY = p.adjust(pvals, method = "BY")
+padjusted_fdr = p.adjust(pvals, method = "fdr")
+padjusted_none = p.adjust(pvals, method = "none")
+
+res = data.frame("Gene"=names, "p-value"=pvals, "P-adjusted Holm"=padjusted_holm, "P-adjusted Hochberg"=padjusted_hochberg, "P-adjusted Hommel"=padjusted_hommel, "P-adjusted Boneferroni"=padjusted_bonferroni, "P-adjusted BH"=padjusted_BH, "P-adjusted BY"=padjusted_BY, "P-adjusted Fdr"=padjusted_fdr, "P-adjusted None"=padjusted_none)
+write.csv(res, file="GSE6631-Adjusted-Pvals-All-Methods-Wilcoxon.csv")
+
