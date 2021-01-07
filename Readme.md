@@ -16,12 +16,10 @@ Identifying biomarkers play a vital role in some clinical applications like diag
 https://ieeexplore.ieee.org/abstract/document/9303555
 
 
-## License
-All code in this repository is copyright 2020. All Rights Reserved.
 
-Licensed under the MIT License. You may not use this file except in compliance with the License. Use and/or modification of this code outside of this repository must reference:
-
-> @INPROCEEDINGS{9303555,
+## Citation
+```bibtex
+@INPROCEEDINGS{9303555,
   author={K. A. {Hasan} and M. A. {Mehedi Hasan}},
   booktitle={2019 3rd International Conference on Electrical, Computer   Telecommunication Engineering (ICECTE)}, 
   title={Identification of Biomarkers for Head and Neck Cancer by Analyzing Multiple mRNA Expression Datasets}, 
@@ -30,3 +28,4 @@ Licensed under the MIT License. You may not use this file except in compliance w
   number={},
   pages={205-208},
   doi={10.1109/ICECTE48615.2019.9303555}}
+```
